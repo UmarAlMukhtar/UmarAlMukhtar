@@ -7,7 +7,7 @@ Welcome to my digital hub! 🚀 Here, you'll find a blend of innovation, passion
 ## 🧑‍💻 About Me  
 - 🎓 **Second-Year CSE Student** at **LBS College of Engineering, Kasargod**.  
 - 🎯 Aspiring **Software Developer** with a knack for **Problem Solving** and **Innovation**.  
-- 🛠️ **Technical Lead** at the **Innovation and Entrepreneurship Development Cell (IEDC)**.  
+- 🛠️ **Technology Lead & CTO** at the **Innovation and Entrepreneurship Development Cell (IEDC)**.  
 - 🌍 **Captain** of the **Entrepreneur Development Club**—leading change and empowering ideas. 
 
 ---
