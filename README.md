@@ -48,7 +48,7 @@ A space where **code meets creativity**, and every idea turns into an innovation
 ---
 
 ### 🌐 SHUCHITHWA EYE – CleanTech Waste Monitoring System  
-**Tech Stack:** Computer Vision, Python, Flask, AI  
+**Tech Stack:** Computer Vision, Python, MERN, AI  
 - AI-powered system to detect improper waste disposal in public areas  
 - Designed for municipalities to enable monitoring, accountability, and data-driven decisions  
 - Includes live demo systems and real-time reporting  
