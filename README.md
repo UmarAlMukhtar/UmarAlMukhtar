@@ -29,22 +29,40 @@ A space where **code meets creativity**, and every idea turns into an innovation
 
 ## 🚀 Featured Projects
 
-| Project | Description |
-|--------|-------------|
-| 🤖 **Smart Attendance System** | Facial recognition-based AI system for automated and accurate attendance |
-| 🗑️ **Litter Detection System** | Real-time AI monitoring of littering in public spaces |
-| 📱 **Community App** | A digital platform to empower student collaboration and engagement |
-| 🌐 **SHUCHITHWA EYE** | CleanTech project with live demo systems to monitor waste management |
+### 🎨 Personal Portfolio Website  
+**Tech Stack:** React, Tailwind CSS, Three.js  
+- Fully responsive and performance-optimized portfolio  
+- Integrated 3D models for interactive UI using Three.js  
+- Highlights projects, experience, and certifications  
+🔗 [View Website](https://umaralmukhtar.vercel.app)
+
+---
+
+### 🏞️ Kasaroam – Tourism Platform for Kasaragod  
+**Tech Stack:** HTML, CSS, JavaScript  
+- Developed under the **Smart City Initiative**  
+- Promotes Kasaragod’s tourist destinations with responsive UI  
+- Team-based project with visually rich design  
+🔗 [Visit Website](https://kasaroam.in)
+
+---
+
+### 🌐 SHUCHITHWA EYE – CleanTech Waste Monitoring System  
+**Tech Stack:** Computer Vision, Python, Flask, AI  
+- AI-powered system to detect improper waste disposal in public areas  
+- Designed for municipalities to enable monitoring, accountability, and data-driven decisions  
+- Includes live demo systems and real-time reporting  
+
+---
 
 > ⚡ _Always building, always learning, always sharing._
 
----
 
 ## 📈 GitHub Stats & Activity
 
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=umaralmukhtar&theme=radical" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=umaralmukhtar&theme=radical" />
+  <img src="https://github-profile-trophy.vercel.app/?username=umaralmukhtar&theme=radical&row=1&column=6" />
 </p>
 
 ---
