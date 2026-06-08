@@ -4,7 +4,7 @@ Roles: [`Webmaster @ IEEE IA/IE/PELS JT Chapter Kerala`](https://ia.ie.pels.ieee
 
 # Projects
 
-1. **[Demosnap](https://github.com/UmarAlMukhtar/demosnap)** (Rust · Tauri · React)
+1. **[FocusFlow](https://github.com/UmarAlMukhtar/focusflow)** (Rust · Tauri · React)
    - Free, open-source desktop screen recorder with automatic professional editing — auto-zooms clicks, smooths cursor, and enhances recordings hands-free.
 
 2. **SHUCHITHWA EYE** (Node.js · React · YOLO)
