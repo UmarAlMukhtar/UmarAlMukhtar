@@ -1,6 +1,6 @@
 Hi, I'm Umar Al Mukhtar. I'm a final-year CSE student at LBS College of Engineering, building scalable systems and open-source tools. Freelancer. Former/current community lead at IEEE, IEDC, and GDG.
 
-Roles: [`Webmaster @ IEEE IA/IE/PELS JT Chapter Kerala`](https://ia.ie.pels.ieeekerala.org/)   [`Backend Intern @ MuLearn Foundation`](https://mulearn.org)
+Roles: [`Webmaster @ IEEE IA/IE/PELS JT Chapter Kerala`](https://ia.ie.pels.ieeekerala.org/) 
 
 # Projects
 
