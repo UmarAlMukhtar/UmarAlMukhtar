@@ -1,24 +1,33 @@
-Hi, I'm Umar Al Mukhtar. I'm a final-year CSE student at LBS College of Engineering, building scalable systems and open-source tools. Freelancer. Former/current community lead at IEEE, IEDC, and GDG.
+<!-- Both images live next to this README on the default branch. -->
+<p align="center">
+  <img src="./banner.svg" width="800" alt="Umar Al Mukhtar. Software developer and final-year CSE student building web apps and open-source tools.">
+</p>
 
-Roles: [`Webmaster @ IEEE IA/IE/PELS JT Chapter Kerala`](https://ia.ie.pels.ieeekerala.org/) 
+<p align="center">
+  <a href="https://github.com/UmarAlMukhtar?tab=overview">
+    <img src="./contributions.svg" width="800" alt="Every day, in blue. View Umar’s GitHub contribution activity.">
+  </a>
+</p>
 
-# Projects
+<p align="center">
+  <a href="https://umaralmukhtar.dev/">Portfolio</a> ·
+  <a href="https://linkedin.com/in/umaralmukhtaribrahimkutty">LinkedIn</a> ·
+  <a href="https://instagram.com/umaralmukhtar_">Instagram</a> ·
+  <a href="mailto:umar1868807@gmail.com">Email</a>
+</p>
 
-1. **[FocusFlow](https://github.com/UmarAlMukhtar/focusflow)** (Rust · Tauri · React)
-   - Free, open-source desktop screen recorder with automatic professional editing — auto-zooms clicks, smooths cursor, and enhances recordings hands-free.
+I study Computer Science and Engineering at LBS College of Engineering and serve as
+[webmaster for the IEEE IA/IE/PELS Joint Chapter Kerala](https://ia.ie.pels.ieeekerala.org/).
 
-2. **SHUCHITHWA EYE** (Node.js · React · YOLO)
-   - CleanTech AI system for municipalities to detect and monitor littering and waste disposal in real time using computer vision.
+## Projects
 
-3. **MEDISCRIBE** (Python · OCR)
-   - AI-powered system that converts handwritten medical prescriptions into structured, readable text.
-
-4. **[IEDC Management Ecosystem](https://github.com/iedclbscek/iedc-ecosystem)** (React · Node · MongoDB)
-   - Modular 3-tier portal system (Public, Admin & Student) in a Monorepo architecture managing 500+ student registrations.
-
-5. **[Kasaroam](https://github.com/UmarAlMukhtar)** (HTML · CSS · Javascript)
-   - Tourism discovery platform developed under the Smart City Initiative.
-
-# Connect
-
-[LinkedIn](https://linkedin.com/in/umaralmukhtaribrahimkutty) · [Instagram](https://instagram.com/umaralmukhtar_) · [Email](mailto:umar1868807@gmail.com) · [WhatsApp](https://wa.me/+9109037868807)
+- **[FocusFlow](https://github.com/UmarAlMukhtar/FocusFlow)** · Rust, Tauri, React  
+  Open-source desktop screen recorder with automatic click zoom and cursor smoothing.
+- **Shuchithwa Eye** · Node.js, React, YOLO  
+  Computer vision system for detecting and monitoring waste dumping.
+- **Mediscribe** · Python, OCR  
+  Turns handwritten prescriptions into structured text.
+- **[IEDC Management Ecosystem](https://github.com/iedclbscek/iedc-ecosystem)** · React, Node.js, MongoDB  
+  Public, admin, and student portals for managing IEDC registrations.
+- **Kasaroam** · HTML, CSS, JavaScript  
+  Tourism discovery platform developed under the Smart City Initiative.

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 242"
+     role="img" aria-labelledby="title">
+  <title id="title">Every day, in blue — GitHub contribution calendar</title>
+  <style>
+    .mono { font-family: ui-monospace, Consolas, monospace; }
+    .label { fill: #9bbce5; font-size: 13px; }
+    .q0 { fill: #142941; }
+    .q1 { fill: #174a8a; }
+    .q2 { fill: #176add; }
+    .q3 { fill: #3396ff; }
+    .q4 { fill: #83caff; }
+  </style>
+  <defs>
+    <pattern id="sample-grid" x="72" y="92" width="13" height="13"
+             patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" rx="2" class="q0"/>
+    </pattern>
+  </defs>
+
+  <!-- Frame, weekday labels, and legend persist across refreshes. -->
+  <rect x=".5" y=".5" width="799" height="241" rx="22"
+        fill="#091426" stroke="#254166"/>
+  <g class="mono">
+    <text x="29" y="42" font-size="19" fill="#79baff">&gt;</text>
+    <text x="52" y="42" font-size="23" fill="#e5f0ff" font-weight="700">Every day, in blue</text>
+    <path d="M29 58h742 M29 196h742" stroke="#203859"/>
+    <g class="label">
+      <text x="29" y="114">Mon</text>
+      <text x="29" y="140">Wed</text>
+      <text x="29" y="166">Fri</text>
+      <text x="29" y="221">Rolling year</text>
+      <text x="646" y="221" text-anchor="end">Less</text>
+      <text x="737" y="221">More</text>
+    </g>
+    <g transform="translate(655 211)">
+      <rect class="q0" width="10" height="10" rx="2"/>
+      <rect class="q1" x="15" width="10" height="10" rx="2"/>
+      <rect class="q2" x="30" width="10" height="10" rx="2"/>
+      <rect class="q3" x="45" width="10" height="10" rx="2"/>
+      <rect class="q4" x="60" width="10" height="10" rx="2"/>
+    </g>
+
+    <!-- Keep both markers. The workflow replaces the sample between them. -->
+    <!-- calendar:start -->
+    <text class="label" x="771" y="42" text-anchor="end">Sample data</text>
+    <g class="label">
+      <text x="72" y="82">Jan</text>
+      <text x="241" y="82">Apr</text>
+      <text x="410" y="82">Jul</text>
+      <text x="579" y="82">Oct</text>
+    </g>
+    <g id="days">
+      <rect x="72" y="92" width="686" height="88" fill="url(#sample-grid)"/>
+      <path class="q1" d="M98 105h10v10h-10z M176 157h10v10h-10z M254 118h10v10h-10z M358 131h10v10h-10z M449 105h10v10h-10z M553 144h10v10h-10z M618 118h10v10h-10z M722 170h10v10h-10z"/>
+      <path class="q2" d="M111 118h10v10h-10z M241 105h10v10h-10z M332 144h10v10h-10z M462 118h10v10h-10z M540 131h10v10h-10z M631 131h10v10h-10z M735 157h10v10h-10z"/>
+      <path class="q3" d="M124 131h10v10h-10z M267 131h10v10h-10z M345 144h10v10h-10z M475 131h10v10h-10z M657 144h10v10h-10z M748 144h10v10h-10z"/>
+      <path class="q4" d="M137 118h10v10h-10z M358 157h10v10h-10z M488 118h10v10h-10z M670 131h10v10h-10z"/>
+    </g>
+    <!-- calendar:end -->
+  </g>
+</svg>

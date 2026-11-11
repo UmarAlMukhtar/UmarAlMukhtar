@@ -1,0 +1,120 @@
+name: Update blue contribution grid
+
+on:
+  schedule:
+    # 03:17 UTC / 08:47 IST every day.
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-contributions
+
+jobs:
+  refresh:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Fetch and render calendar
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROFILE_LOGIN: ${{ github.repository_owner }}
+        run: |
+          # GitHub supplies its rolling-year calendar and relative activity levels.
+          gh api graphql -f login="$PROFILE_LOGIN" -f query='
+            query($login: String!) {
+              user(login: $login) {
+                contributionsCollection {
+                  contributionCalendar {
+                    totalContributions
+                    weeks {
+                      contributionDays { date weekday contributionCount contributionLevel }
+                    }
+                  }
+                }
+              }
+            }' > "$RUNNER_TEMP/profile-calendar.json"
+
+          python3 - "$RUNNER_TEMP/profile-calendar.json" <<'PY'
+          import json
+          import sys
+          from datetime import date
+          from pathlib import Path
+
+          response = json.loads(Path(sys.argv[1]).read_text())
+          if response.get("errors"):
+              raise SystemExit("GitHub returned GraphQL errors. The current SVG is preserved.")
+          calendar = response["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+          weeks = calendar["weeks"]
+          if not 1 <= len(weeks) <= 54:
+              raise SystemExit("Unexpected calendar width. The current SVG is preserved.")
+
+          levels = {
+              "NONE": "q0", "FIRST_QUARTILE": "q1", "SECOND_QUARTILE": "q2",
+              "THIRD_QUARTILE": "q3", "FOURTH_QUARTILE": "q4",
+          }
+          total = calendar["totalContributions"]
+          labels = [
+              f'<text class="label" x="771" y="42" text-anchor="end">{total:,} contributions</text>'
+          ]
+          cells = []
+          last_month = None
+          last_label_x = 0
+          for column, week in enumerate(weeks):
+              x = 72 + 13 * column
+              for day in week["contributionDays"]:
+                  day_date = date.fromisoformat(day["date"])
+                  month = (day_date.year, day_date.month)
+                  if month != last_month:
+                      last_month = month
+                      if x - last_label_x >= 39:
+                          labels.append(
+                              f'<text class="label" x="{x}" y="82">{day_date:%b}</text>'
+                          )
+                          last_label_x = x
+
+                  # Sunday is row 0. A partial week keeps its actual weekdays.
+                  weekday = day["weekday"]
+                  if not 0 <= weekday <= 6:
+                      raise SystemExit("Invalid weekday. The current SVG is preserved.")
+                  y = 92 + 13 * weekday
+                  shade = levels[day["contributionLevel"]]
+                  count = day["contributionCount"]
+                  cells.append(
+                      f'<rect class="{shade}" x="{x}" y="{y}" width="10" height="10" rx="2">'
+                      f'<title>{day_date}: {count} contributions</title></rect>'
+                  )
+          if not cells:
+              raise SystemExit("Calendar contains no days. The current SVG is preserved.")
+
+          # Replace only the calendar data. Keep the SVG design and markers.
+          path = Path("contributions.svg")
+          start = "<!-- calendar:start -->"
+          end = "<!-- calendar:end -->"
+          before, rest = path.read_text(encoding="utf-8").split(start)
+          _, after = rest.split(end)
+          markup = "\n    ".join([*labels, '<g id="days">', *cells, "</g>"])
+          path.write_text(f"{before}{start}\n    {markup}\n    {end}{after}", encoding="utf-8")
+          PY
+
+      - name: Commit and push changed SVG
+        shell: bash
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          git add -- contributions.svg
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m 'chore: refresh blue contribution grid'
+          git push origin "HEAD:refs/heads/$DEFAULT_BRANCH"
