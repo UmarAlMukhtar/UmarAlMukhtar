@@ -1,4 +1,4 @@
-name: Update blue contribution grid
+name: Update contribution grid
 
 on:
   schedule:
@@ -116,5 +116,5 @@ jobs:
           fi
           git -c user.name='github-actions[bot]' \
               -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
-              commit -m 'chore: refresh blue contribution grid'
+              commit -m 'chore: refresh contribution grid'
           git push origin "HEAD:refs/heads/$DEFAULT_BRANCH"
